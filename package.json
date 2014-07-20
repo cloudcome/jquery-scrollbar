@@ -1,0 +1,25 @@
+{
+  "name": "jquery-scrollbar",
+  "version": "1.2.1",
+  "description": "jquery.fn.scrollbar 自定义滚动条",
+  "keywords": [
+    "jquery",
+    "yquery",
+    "ydr",
+    "scrollbar"
+  ],
+  "author": {
+    "name":"cloudcome",
+    "email":"cloudcome@163.com"
+  },
+  "homepage": "https://ydr.me/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloudcome/jquery-scrollbar"
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "jquery-scrollbar.js",
+    "dependencies": {}
+  }
+}
