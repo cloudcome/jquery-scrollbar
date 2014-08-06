@@ -15,7 +15,7 @@
 
 
 
-module.exports = function($){
+module.exports = function($) {
     'use strict';
 
     var udf,
@@ -129,7 +129,7 @@ module.exports = function($){
                 $thumbX,
                 $thumbY;
 
-            if(elementTagName === 'TBODY'){
+            if (elementTagName === 'TBODY') {
                 $element = $element.closest('table').clone().insertAfter($element.closest('table')).empty().append($element);
             }
 
@@ -293,7 +293,6 @@ module.exports = function($){
                     the.thumbX = clickX < minX ? clickX : minX + clickX - maxX;
                     the._scroll('x', the.options.duration);
                 }
-                return !1;
             });
 
             $trackY.click(function(e) {
@@ -305,7 +304,6 @@ module.exports = function($){
                     the.thumbY = clickY < minY ? clickY : minY + clickY - maxY;
                     the._scroll('y', the.options.duration);
                 }
-                return !1;
             });
         },
 
@@ -313,9 +311,9 @@ module.exports = function($){
 
         /**
          * 滚动
-         * @param  {String}    axis     轴向，默认y
-         * @param  {Number}    duration 动画时间，默认为1
-         * @param  {Function}  callback 动画回调，默认为$.noop
+         * @param  {String}    axis                      轴向，默认y
+         * @param  {Number}    durationORdontToggleClass 动画时间或不切换class
+         * @param  {Function}  callback                  动画回调，默认为$.noop
          * @return undefined
          * @version 1.0
          * 2014年7月5日01:20:39
@@ -389,27 +387,6 @@ module.exports = function($){
             }
         },
 
-
-
-
-        /**
-         * 设置或获取选项
-         * @param  {String/Object} key 键或键值对
-         * @param  {*}             val 值
-         * @return 获取时返回键值，否则返回this
-         * @version 1.0
-         * 2014年7月3日20:08:16
-         */
-        options: function(key, val) {
-            // get
-            if ($.type(key) === 'string' && val === udf) return this.options[key];
-
-            var map = {};
-            if ($.type(key) === 'object') map = key;
-            else map[key] = val;
-
-            this.options = $.extend(this.options, map);
-        },
 
 
 
@@ -521,13 +498,13 @@ module.exports = function($){
 
                 $thumbX.drag('options', {
                     max: {
-                        left: the.maxX,
+                        left: the.maxX
                     }
                 });
 
                 $thumbY.drag('options', {
                     max: {
-                        top: the.maxY,
+                        top: the.maxY
                     }
                 });
             }
@@ -643,6 +620,28 @@ module.exports = function($){
         left: function(fn) {
             return this.x(0, fn);
         },
+
+
+
+
+         /**
+         * 设置或获取选项
+         * @param  {String/Object} key 键或键值对
+         * @param  {*}             val 值
+         * @return 获取时返回键值，否则返回this
+         * @version 1.0
+         * 2014年7月3日20:08:16
+         */
+        options: function(key, val) {
+            // get
+            if ($.type(key) === 'string' && val === udf) return this.options[key];
+
+            var map = {};
+            if ($.type(key) === 'object') map = key;
+            else map[key] = val;
+
+            this.options = $.extend(this.options, map);
+        }
     };
 
 
