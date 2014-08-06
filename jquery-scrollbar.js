@@ -656,8 +656,12 @@ module.exports = function($){
 
     function _isPlaceholderScroll() {
         var $iframe = $('<iframe>').appendTo(body),
-            $div = $('<div/>').appendTo($iframe.contents()[0].body),
+            $div,
             clientWidth;
+
+        $iframe.contents()[0].write('<!DOCTYPE html><div></div>');
+
+        $div = $iframe.contents().find('div');
 
         $div.css({
             width: 100,
