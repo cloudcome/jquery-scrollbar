@@ -135,7 +135,7 @@ $('#demo').scrollbar('options', {
 
 
 ## Demo
-[http://spmjs.io/docs/jquery-scrollbar/demo/](http://spmjs.io/docs/jquery-scrollbar/demo/)
+[http://spmjs.io/docs/jquery-scrollbar/examples/index.html](http://spmjs.io/docs/jquery-scrollbar/examples/index.html)
 
 
 ## History
