@@ -1,7 +1,7 @@
 {
   "name": "jquery-scrollbar",
-  "version": "1.2.2",
-  "description": "jquery.fn.scrollbar 自定义滚动条",
+  "version": "1.3.0",
+  "description": "jQuery 自定义滚动条插件",
   "keywords": [
     "jquery",
     "yquery",
@@ -9,17 +9,25 @@
     "scrollbar"
   ],
   "author": {
-    "name":"cloudcome",
-    "email":"cloudcome@163.com"
+    "name": "cloudcome",
+    "email": "cloudcome@163.com",
+    "url": "http://ydr.me"
   },
-  "homepage": "https://ydr.me/",
+  "homepage": "http://spmjs.io/docs/jquery-scrollbar/",
   "repository": {
     "type": "git",
     "url": "https://github.com/cloudcome/jquery-scrollbar"
   },
+  "bugs": {
+    "url": "https://github.com/cloudcome/jquery-scrollbar/issues"
+  },
   "licenses": "MIT",
   "spm": {
     "main": "jquery-scrollbar.js",
-    "dependencies": {}
+    "dependencies": {
+      "jquery-mousewheel": "1.2.2",
+      "jquery-drag": "1.3.1",
+      "jquery-scrollbar.css": "1.1.0"
+    }
   }
 }

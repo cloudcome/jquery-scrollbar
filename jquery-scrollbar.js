@@ -658,7 +658,7 @@ module.exports = function($) {
             $div,
             clientWidth;
 
-        $iframe.contents()[0].write('<!DOCTYPE html><html><div></div></html>');
+        $iframe.contents()[0].write('<!DOCTYPE html><html><body><div></div></body></html>');
 
         $div = $iframe.contents().find('div');
 

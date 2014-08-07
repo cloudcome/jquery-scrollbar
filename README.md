@@ -1,56 +1,47 @@
-# jquery-scrollbar [![spm version](http://spmjs.io/badge/jquery-scrollbar)](http://spmjs.io/package/jquery-scrollbar)
+# jquery-scrollbar
 
-AUTHOR WEBSITE: [http://ydr.me/](http://ydr.me/)
+---
 
-jquery.fn.scrollbar 自定义滚动条
+[![spm version](http://spmjs.io/badge/jquery-scrollbar)](http://spmjs.io/package/jquery-scrollbar)
 
-**五星提示：当前脚本未作优化、未完工，请勿用在生产环境**
+jQuery 自定义滚动条插件
 
-__IT IS [A SPM PACKAGE](http://spmjs.io/package/jquery-scrollbar).__
+---
 
+## Install
 
-
-
-
-#USAGE
 ```
+$ spm install jquery-scrollbar --save
+```
+
+## Usage
+
+It is very easy to use this module.
+
+```js
+// require jquery
 var $ = require('jquery');
+
+// require jquery-mousewheel
 require('jquery-mousewheel')($);
+
+// require jquery-drag
 require('jquery-drag')($);
-require('jquery-scrollbar.css');
+
+// extend jquery.fn
 require('jquery-scrollbar')($);
 
-
-// 1、初始化
-$('#demo').scrollbar({...});
-
-
-// 2、获取位置
-$('#demo').scrollbar('x');
-$('#demo').scrollbar('y');
-
-
-// 3、定点滚动
-$('#demo').scrollbar('x', x);
-$('#demo').scrollbar('y', y);
-$('#demo').scrollbar('top');
-$('#demo').scrollbar('right');
-$('#demo').scrollbar('bottom');
-$('#demo').scrollbar('left');
-
-
-// 4、再次渲染
-$('#demo').scrollbar('render',{
-  width:100,
-  height:100,
-});
+// use
+$('#demo').scrollbar();
 ```
 
 
+## Api
 
-#OPTIONS
-```
-$.fn.scrollbar.defaults = {
+### Options
+
+```js
+$.fn.drag.scrollbar = {
     // 区域的宽度
     width: 'auto',
     // 区域的高度
@@ -79,3 +70,74 @@ $.fn.scrollbar.defaults = {
     onscrolly: $.noop
 };
 ```
+
+
+### Functions
+
+#### x
+```js
+// 滚动条在x轴的比例
+$('#demo').scrollbar('x');
+
+// 设置滚动条在x轴的比例
+$('#demo').scrollbar('x', .5);
+```
+
+
+#### y
+```js
+// 滚动条在y轴的比例
+$('#demo').scrollbar('y');
+
+// 设置滚动条在y轴的比例
+$('#demo').scrollbar('y', .5);
+```
+
+
+#### top
+```js
+// 设置滚动条到最顶部
+$('#demo').scrollbar('top');
+```
+
+
+#### right
+```js
+// 设置滚动条到最右边
+$('#demo').scrollbar('right');
+```
+
+#### bottom
+```js
+// 设置滚动条到最底部
+$('#demo').scrollbar('bottom');
+```
+
+#### left
+```js
+// 设置滚动条到最左边
+$('#demo').scrollbar('left');
+```
+
+
+#### options
+```js
+// get options
+$('#demo').scrollbar('options');
+
+// set options
+$('#demo').scrollbar('options', 'zIndex', 9999);
+$('#demo').scrollbar('options', {
+    axis: 'x',
+    cursor: 'auto'
+});
+```
+
+
+## Demo
+[http://spmjs.io/docs/jquery-scrollbar/demo/](http://spmjs.io/docs/jquery-scrollbar/demo/)
+
+
+## History
+[http://spmjs.io/docs/jquery-scrollbar/history.html](http://spmjs.io/docs/jquery-scrollbar/history.html)
+
