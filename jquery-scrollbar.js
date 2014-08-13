@@ -675,7 +675,9 @@ module.exports = function($) {
 
         clientWidth = $div[0].clientWidth;
 
-        $iframe.remove();
+        // 防止触发 IE 没有权限的 BUG
+        // http://netease.aliapp.com/bug/document.html
+        $iframe.hide();
         return clientWidth < 100;
     }
 

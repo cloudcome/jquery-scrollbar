@@ -1,6 +1,6 @@
 {
   "name": "jquery-scrollbar",
-  "version": "1.3.0",
+  "version": "1.0.0",
   "description": "jQuery 自定义滚动条插件",
   "keywords": [
     "jquery",
